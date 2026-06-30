@@ -122,23 +122,6 @@
             vertical-align: middle;
         }
 
-        /* Bloques Simuladores de Espacio */
-        .graphic-placeholder {
-            background-color: #f1f5f9;
-            border: 3px dashed #cbd5e1;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-            text-align: center;
-            padding: 20px;
-        }
-
         /* Gráfico de la Plática del Mes */
         .topic-graphic {
             background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), url('https://placehold.co/800x300/1a365d/d4af37?text=TACTICA+DE+SEGURIDAD') center/cover;
@@ -340,13 +323,14 @@
             font-weight: bold;
             text-transform: uppercase;
             border: 2px solid #d4af37;
+            white-space: nowrap;
         }
 
         .mvp-text h3 {
             margin: 0 0 5px 0;
             font-family: 'Georgia', serif;
             color: #1a365d;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
 
         .mvp-text h4 {
@@ -427,6 +411,25 @@
             border-bottom: 4px solid #d4af37;
         }
 
+        /* Variante Banner Horizontal para el QR en la Columna Izquierda */
+        .qr-card-horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            padding: 20px 30px;
+        }
+
+        .qr-card-horizontal .qr-text-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .qr-card-horizontal .qr-image-wrapper {
+            margin: 0;
+            flex-shrink: 0;
+        }
+
         .qr-card h4 {
             margin: 0 0 10px 0;
             font-family: 'Georgia', serif;
@@ -445,8 +448,8 @@
         }
 
         .qr-image-wrapper img {
-            width: 150px;
-            height: 150px;
+            width: 130px;
+            height: 130px;
             display: block;
             object-fit: contain;
         }
@@ -458,7 +461,6 @@
         .side-column, 
         .truth-card, 
         .qr-card, 
-        .info-card, 
         .var-list li, 
         .pillar-card,
         .call-to-action {
@@ -472,7 +474,6 @@
         .side-column:hover:not(img), 
         .truth-card:hover:not(img), 
         .qr-card:hover:not(img), 
-        .info-card:hover:not(img), 
         .var-list li:hover:not(img), 
         .pillar-card:hover:not(img),
         .call-to-action:hover:not(img) {
@@ -528,10 +529,36 @@
                 <!-- IMAGEN DE PASOS DE RETROALIMENTACIÓN -->
                 <img src="PASOS RETRO.png" alt="Pasos para una Correcta Retroalimentación" class="steps-image">
 
+                <!-- QR 1: REPORTE DE CONDICIONES Y ACTOS INSEGUROS (Estilo Horizontal) -->
+                <h2 class="section-title" style="margin-top: 40px;">📱 Zona de Vestidores</h2>
+                <div class="qr-card qr-card-horizontal">
+                    <div class="qr-text-content">
+                        <h4>💡 Reporte de Condiciones y Actos Inseguros</h4>
+                        <p>Si detectas un riesgo mayor o una acción insegura en tu área, escanea este código para levantar tu reporte oficial de manera inmediata. ¡Tu reporte previene accidentes!</p>
+                    </div>
+                    <div class="qr-image-wrapper">
+                        <img src="QR reporte de condiciones.png" alt="QR Buzón de Reportes">
+                    </div>
+                </div>
+
             </div>
 
             <!-- Columna Derecha -->
             <div class="side-column">
+
+                <!-- AVISO DE PRECAUCIÓN -->
+                <div class="truth-card" style="border-top-color: #e53e3e; background-color: #fff5f5; padding: 15px; margin-top: 0; margin-bottom: 35px;">
+                    <h4 style="color: #e53e3e; font-size: 1.15rem; margin-bottom: 8px;">
+                        <span class="emoji-large">⚡</span> Aviso: Pruebas Eléctricas
+                    </h4>
+                    <p style="font-size: 0.95rem; color: #742a2a; line-height: 1.5;">
+                        La línea de envasado empieza con <strong>pruebas eléctricas en equipos</strong>. Hay energía hasta los Paneles de Distribución de Energía. Se harán pruebas en cada equipo por especialistas de KRONES. ¡Mantén tu precaución!
+                    </p>
+                </div>
+
+                <!-- SECCIÓN: PIRÁMIDE DE SEGURIDAD -->
+                <h2 class="section-title" style="margin-top: 0;">📈 Marcador del Equipo</h2>
+                <img src="Piramide de seguridad Julio.png" alt="Pirámide de Seguridad CCV" class="steps-image" style="margin-bottom: 40px;">
                 
                 <h2 class="section-title">🔍 VAR de Prevención</h2>
                 
@@ -544,17 +571,6 @@
                         Omitir el uso de EPP (equipo de protección) para "terminar más rápido". Esto es un claro <strong>Acto Inseguro</strong> que amerita una retroalimentación inmediata.
                     </li>
                 </ul>
-
-                <h2 class="section-title" style="margin-top: 40px;">📱 Zona de Vestidores</h2>
-                
-                <!-- QR 1: REPORTE DE CONDICIONES Y ACTOS INSEGUROS -->
-                <div class="qr-card">
-                    <h4>💡 Reporte de Condiciones y Actos Inseguros</h4>
-                    <p>Si detectas un riesgo mayor o una acción insegura, escanea este código para levantar tu reporte oficial.</p>
-                    <div class="qr-image-wrapper">
-                        <img src="QR reporte de condiciones.png" alt="QR Buzón de Reportes">
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -601,14 +617,16 @@
                 <div class="mvp-section" style="margin-bottom: 0;">
                     <div class="mvp-content">
                         <div class="photo-wrapper">
-                            <img src="https://placehold.co/200x200/e2e8f0/e2e8f0" alt="Foto del Trabajador">
+                            <!-- FOTO DEL RECONOCIDO ORIGINAL -->
+                            <img src="Reconocimiento Julio.jpg" alt="Jesús Antonio Hernández Reyes">
                             <div class="mvp-badge">MVP</div>
                         </div>
                         <div class="mvp-text">
-                            <h3>Fernando</h3>
-                            <h4>Línea de Envasado</h4>
+                            <!-- NOMBRE Y ÁREA DEL RECONOCIDO -->
+                            <h3>Jesús Antonio Hernández Reyes</h3>
+                            <h4>Ejecución</h4>
                             <p><strong>¿Por qué es nuestro Jugador Franquicia?</strong><br>
-                            Por su excelente actitud y liderazgo para dar retroalimentación. Fernando siempre aborda a sus compañeros siguiendo los 5 pasos: conectando con respeto y creando compromisos compartidos. ¡Un verdadero líder que evita actos inseguros en la cancha!</p>
+                            Por su excelente actitud y liderazgo para dar retroalimentación. Jesús siempre aborda a sus compañeros siguiendo los 5 pasos: conectando con respeto y creando compromisos compartidos. ¡Un verdadero líder que evita actos inseguros en la cancha!</p>
                         </div>
                     </div>
                 </div>
@@ -648,7 +666,8 @@
                     <h4>⭐ Buzón de Reconocimientos</h4>
                     <p>¿Alguien de tu equipo demostró una gran cultura de seguridad? Escanea aquí para nominar al próximo Jugador Franquicia o Equipo Campeón.</p>
                     <div class="qr-image-wrapper">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Nominaciones" alt="QR Reconocimientos">
+                        <!-- IMAGEN DEL QR DE RECONOCIMIENTOS -->
+                        <img src="QR reconocimiento.png" alt="QR Reconocimientos">
                     </div>
                 </div>
 
@@ -714,12 +733,12 @@
                 <!-- SECCIÓN 2: EQUIPO CAMPEÓN (ABAJO) -->
                 <h2 class="section-title" style="margin-top: 20px;">🏆 El Equipo Campeón de la Jornada</h2>
                 <div class="team-section" style="margin-top: 0; margin-bottom: 0;">
-                    <!-- ESPACIO PARA FOTO GRUPAL -->
-                    <div class="graphic-placeholder" style="height: 250px; background-color: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); color: #fff;">
-                        [ ESPACIO PARA FOTOGRAFÍA DEL EQUIPO CAMPEÓN ]
-                    </div>
+                    
+                    <!-- FOTO EQUIPO EHS -->
+                    <img src="Equipo ganador.jpg" alt="Equipo EHS" class="steps-image" style="margin-bottom: 20px;">
+                    
                     <p>
-                        <strong>Cadena de Suministros:</strong> Reconocimiento especial a todo el equipo por corregir múltiples condiciones menores de forma inmediata, demostrando el criterio correcto de lo que NO requiere reporte técnico, pero sí requiere acción rápida. ¡Felicidades, campeones!
+                        <strong>Ambiental, Seguridad y Salud (EHS):</strong> Reconocimiento especial a todo el equipo por su compromiso inquebrantable con la prevención y por ser nuestra principal guía en la construcción de un entorno seguro. Su dedicación constante nos demuestra que juntos podemos alcanzar nuestra meta de cero accidentes. ¡Felicidades, campeones!
                     </p>
                 </div>
 
@@ -762,17 +781,13 @@
                     </div>
                 </div>
 
-                <!-- PSM PLACEHOLDER 3 -->
-                <div class="graphic-placeholder" style="height: 150px; background-color: #fff; border-color: #4a5568; color: #4a5568;">
-                    [ ESPACIO PSM: <br>MÉTRICAS O INDICADORES ]
-                </div>
-
-                <!-- QR 3: REGISTRO DE LECTURA -->
-                <div class="qr-card">
+                <!-- QR 3: REGISTRO DE LECTURA ACTUALIZADO -->
+                <div class="qr-card" style="margin-top: 30px;">
                     <h4>✅ Registro de Asistencia</h4>
                     <p>Escanea este código para confirmar que leíste esta edición. ¡Tu participación es clave para nuestra cultura preventiva!</p>
                     <div class="qr-image-wrapper">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=RegistroLectura" alt="QR Registro de Lectura">
+                        <!-- IMAGEN DEL QR DE REGISTRO -->
+                        <img src="Registro.png" alt="QR Registro de Lectura">
                     </div>
                 </div>
 
