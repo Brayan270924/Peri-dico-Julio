@@ -324,6 +324,7 @@
             text-transform: uppercase;
             border: 2px solid #d4af37;
             white-space: nowrap;
+            z-index: 2; /* Para que quede sobre la imagen al hacer zoom */
         }
 
         .mvp-text h3 {
@@ -401,6 +402,15 @@
             border-left-color: #ecc94b; 
         }
 
+        /* Logo Champions */
+        .logo-champions {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
         /* Tarjetas QR */
         .qr-card {
             background: linear-gradient(180deg, #1a365d 0%, #0b192c 100%);
@@ -454,7 +464,8 @@
             object-fit: contain;
         }
 
-        /* --- ANIMACIONES Y EFECTOS HOVER (Excluyendo img) --- */
+        /* --- ANIMACIONES Y EFECTOS HOVER --- */
+        /* Animación para Contenedores y Tarjetas (excluyendo img) */
         .topic-graphic, 
         .mvp-section, 
         .team-section, 
@@ -480,6 +491,25 @@
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
             transform: translateY(-5px);
         }
+
+        /* Animación Exclusiva para Imágenes */
+        .steps-image,
+        .centered-image,
+        .photo-wrapper img,
+        .qr-image-wrapper img,
+        .logo-champions {
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+
+        .steps-image:hover,
+        .centered-image:hover,
+        .photo-wrapper img:hover,
+        .qr-image-wrapper img:hover,
+        .logo-champions:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+            z-index: 10;
+        }
         /* ---------------------------------------------------- */
 
         /* Página indicador */
@@ -504,7 +534,7 @@
             <div class="meta-info">
                 <span>📍 Cervecería: BEERACRUZ (CCV)</span>
                 <span>📅 Edición: Julio 2026</span>
-                <span>📖 Volumen: 01</span>
+                <span>📖 Volumen: 02</span>
             </div>
         </div>
 
@@ -546,14 +576,9 @@
             <!-- Columna Derecha -->
             <div class="side-column">
 
-                <!-- AVISO DE PRECAUCIÓN -->
-                <div class="truth-card" style="border-top-color: #e53e3e; background-color: #fff5f5; padding: 15px; margin-top: 0; margin-bottom: 35px;">
-                    <h4 style="color: #e53e3e; font-size: 1.15rem; margin-bottom: 8px;">
-                        <span class="emoji-large">⚡</span> Aviso: Pruebas Eléctricas
-                    </h4>
-                    <p style="font-size: 0.95rem; color: #742a2a; line-height: 1.5;">
-                        La línea de envasado empieza con <strong>pruebas eléctricas en equipos</strong>. Hay energía hasta los Paneles de Distribución de Energía. Se harán pruebas en cada equipo por especialistas de KRONES. ¡Mantén tu precaución!
-                    </p>
+                <!-- LOGO CHAMPIONS / EMPRESA -->
+                <div style="width: 100%; margin-top: 0; margin-bottom: 35px; text-align: center;">
+                    <img src="LOGO champions.png" alt="Safety Champions Logo" class="logo-champions">
                 </div>
 
                 <!-- SECCIÓN: PIRÁMIDE DE SEGURIDAD -->
@@ -571,6 +596,16 @@
                         Omitir el uso de EPP (equipo de protección) para "terminar más rápido". Esto es un claro <strong>Acto Inseguro</strong> que amerita una retroalimentación inmediata.
                     </li>
                 </ul>
+
+                <!-- AVISO DE PRECAUCIÓN ELÉCTRICA -->
+                <div class="truth-card" style="border-top-color: #e53e3e; background-color: #fff5f5; padding: 15px; margin-top: 35px; margin-bottom: 0;">
+                    <h4 style="color: #e53e3e; font-size: 1.15rem; margin-bottom: 8px;">
+                        <span class="emoji-large">⚡</span> Aviso: Pruebas Eléctricas
+                    </h4>
+                    <p style="font-size: 0.95rem; color: #742a2a; line-height: 1.5;">
+                        La línea de envasado empieza con <strong>pruebas eléctricas en equipos</strong>. Hay energía hasta los Paneles de Distribución de Energía. Se harán pruebas en cada equipo por especialistas de KRONES. ¡Mantén tu precaución!
+                    </p>
+                </div>
 
             </div>
         </div>
